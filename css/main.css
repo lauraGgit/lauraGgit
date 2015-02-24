@@ -67,6 +67,17 @@ transform-style: inherit;
     position: fixed;
 bottom: 0;
   }
+
+  .icon--brief > svg {
+  width: 200px;
+}
+  .icon > svg {
+    height: 60px;
+  }
+
+  .icon--faburlus {
+    font-size: 60px;
+  }
 }
 
 @media screen and (min-width: 371px){
