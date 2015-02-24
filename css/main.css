@@ -63,6 +63,10 @@ transform-style: inherit;
     .nav-banner{
     height:200px;
   }
+  .site-footer {
+    position: fixed;
+bottom: 0;
+  }
 }
 
 @media screen and (min-width: 371px){
