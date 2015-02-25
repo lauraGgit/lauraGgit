@@ -11,10 +11,28 @@
 ">
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <link rel="canonical" href="http://lgerhardt.com/">
   <link rel="alternate" type="application/rss+xml" title="Laura Gerhardt" href="http://lgerhardt.com/feed.xml" />
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></</script>
+  <script type="text/javascript">var header = $('header');
+var range = 200;
+
+$(window).on('scroll', function () {
+  console.log();
+  if($('#footer-gage').css('font-size') == '15px'){;
+
+    var st = $(this).scrollTop();
+    $('.nav-banner').each(function () {
+        var offset = $(this).offset().top;
+        var height = $(this).outerHeight();
+        offset = offset + height / 2;
+        percent = 1 - (st - offset + range) / range;
+        $(this).css({ 'opacity': 0.4*percent+0.6});
+        
+    });
+    }
+});</script>
 </head>
 
 
@@ -22,7 +40,7 @@
 
     <header class="site-header slide">
 <!-- <img src="img/_MG_7368bw.jpg" class="img-responsive banner" alt="Responsive image"> -->
-<div class="nav-banner"><div class="site-title" href="/">Laura Gerhardt</div></div>
+<div class="nav-banner"></div><div class="site-title" href="/">Laura Gerhardt</div>
   <div class="wrapper">
 
     
@@ -41,7 +59,7 @@
       <div class="col-md-4 col-sm-8">
         <a href="http://www.brief-fb.me" title="Brief">
           <span class="icon icon--brief">
-            <svg viewBox="0 0 246.767 90.006" enable-background="new 0 0 246.767 90.006">
+            <svg viewBox="0 0 246.767 90.006" enable-background="new 0 0 246.767 90.006" id="brief">
               <g>
                 <path d="M53.136,64.048c0,13.708-9.697,25.958-29.231,25.958c-8.866,0-14.546,0-18.148,0c-3.879,0-5.264,0-5.264,0v-5.542V5.134 v-5.542c0,0,0.831,0,5.264,0c3.048,0,8.035,0,15.655,0c18.425,0,26.184,10.937,26.184,21.875c0,15.166-13.3,19.249-13.3,19.249 S53.136,43.487,53.136,64.048z M6.983,7.425v30.833h14.566c4.71,0,18.742-0.312,18.742-16.5c0-7.875-3.503-14.333-18.604-14.333 H6.983z M45.417,63.757c0-18.375-18.188-18.958-23.868-18.958l-1.247,1l-0.139-1l-13.181,1v37.374h17.06
                   C41.222,83.173,45.417,73.673,45.417,63.757z M110.49,90.006h-8.55c0,0-5.265-8.021-5.265-21.874c0-20.854-15.417-19.875-18.88-19.875H65.327v41.749h-7.441V-0.408 c0,0,14.922,0,22.819,0c19.533,0,25.748,14.583,25.748,23.333c0,6.708-4.275,16.916-14.526,21.291
@@ -189,7 +207,7 @@
       </div>
 
       <div class="footer-col  footer-col-3">
-        <p class="text">Welcome to the website of a public policy student interested in civic innovation.
+        <p class="text" id="footer-gage">Welcome to the website of a public policy student interested in civic innovation.
 </p>
   <h6 class="text-right">Photo by <a href="http://www.heidibphoto.com/">Heidi Bohnenkamp</a></h6>
       </div>
