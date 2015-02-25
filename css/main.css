@@ -49,6 +49,7 @@ figcaption {
     background-repeat:no-repeat;
     background-size:cover;
     width: 100%;
+
 }
 .slide {
 position: relative;
@@ -77,6 +78,8 @@ transform-style: inherit;
 @media screen and (min-width: 768px) {
   .nav-banner{
     height:475px;
+    background-attachment: fixed;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
   }
 }
 
@@ -251,10 +254,12 @@ font-weight: bold;
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
-  position: relative; }
+  position: relative;
+  background-color: #3b3b3b;
+  color: #fff;
+}
 
 .site-title {
   font-size: 100px;
@@ -266,17 +271,17 @@ right: 3%;
 position: absolute;
 font-family: Garamond;
 text-shadow: 2px 3px 5px rgba(76, 73, 73, 0.47);
+opacity: 1;
 /*transform: translateZ(40px) translateX(-104%) translateY(-200%);*/
 }
   .site-title, .site-title:visited {
-    color: #fff; }
+     }
 
-    .site-title:hover{
-      
-    }
+
 
 @media screen and (max-width: 768px){
   .site-title {font-size: 75px }
+  #footer-gage {font-size: 14px;}
 }
 
 @media screen and (max-width: 375px){
@@ -397,5 +402,7 @@ text-shadow: 2px 3px 5px rgba(76, 73, 73, 0.47);
  * Page content
  */
 .page-content {
-  padding: 30px 0; }
+  padding: 30px 0;
+  min-height: 60vh;
+   }
 
