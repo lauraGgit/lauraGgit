@@ -14,6 +14,14 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="canonical" href="http://lgerhardt.com/">
   <link rel="alternate" type="application/rss+xml" title="Laura Gerhardt" href="http://lgerhardt.com/feed.xml" />
+  <link rel="shortcut icon" href="/favicon.ico?v=1.1"> 
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></</script>
   <script type="text/javascript">var header = $('header');
 var range = 200;
@@ -28,7 +36,7 @@ $(window).on('scroll', function () {
         var height = $(this).outerHeight();
         offset = offset + height / 2;
         percent = 1 - (st - offset + range) / range;
-        $(this).css({ 'opacity': 0.4*percent+0.6});
+        $(this).css({ 'opacity': 0.4*percent+0.6}); 
         
     });
     }
